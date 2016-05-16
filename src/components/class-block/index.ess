@@ -1,0 +1,10 @@
+// This file cannot be empty, if it's imported in the jade
+// notice we didn't have a __local__ directory in the components, there's no need here
+
+.ClassBlock
+  display flex
+  width 120px
+  height 60px
+  background-color blue
+  text-align center
+  margin 4px

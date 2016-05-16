@@ -1,0 +1,3 @@
+.ContentWrapper
+  max-width 600px
+  margin 24px auto

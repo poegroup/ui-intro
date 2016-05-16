@@ -4,6 +4,22 @@
 html
   %ui-kit/skins/base/typography.ess
 
-.App-component
-  background white
-  color = __.color.primary
+.App
+  //- become `App-component`
+  &-component
+    background white
+    color = __.color.primary
+    //- becomes `App-title`
+  &-title
+    color green
+    display inline-block
+    padding 18px
+    //- App-nav
+  &-nav
+    display inline-block
+    height 24px
+    padding 0 12px
+    //- App-nav-link
+    //- there must be at least one css property beneath a class name definition
+    &-link
+      %src/skins/link.ess //- this is how we import skins, they can get as complicated as you want, skins can import other skins

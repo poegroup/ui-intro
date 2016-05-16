@@ -1,6 +1,14 @@
 :doc
   @name App
 
+//- the `__local__` directories are ignored by the router, use them for local assets
 import './__local__/index.ess'
 
-h1 ui-intro
+
+//- notice here these two elements were automatically nested in a div with the class-name `App`,
+//-    that is because there was more than 1 HTML element at the `root` of the file
+.App-title ui-intro
+.App-nav
+  a.App-nav-link(to=require.resolve('./classes')) Classes
+
+yield

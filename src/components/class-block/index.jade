@@ -1,0 +1,16 @@
+:doc
+  This is our class block reusable component
+
+  @name ClassBlock                  // This is what creates the base class name for the component
+  @prop {Object} class
+  @prop {String} [backgroundColor]  // This is an optional prop
+
+import './index.ess'
+
+var classroom = props.classroom
+var backgroundColor = props.backgroundColor
+
+//- This div will automatically get the class name from the `@name` declaration above, or it can be explicitly set for readability
+.ClassBlock(style={'background-color': backgroundColor})
+  //- if you don't specify an html tag, it will automatically be a `div`
+  .ClassBlock-title= classroom.name

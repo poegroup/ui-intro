@@ -1,0 +1,38 @@
+:doc
+  This is the defualt route, so when you hit /classes you'll automatically end up here
+
+  @name Classes
+
+//- import order: generic resources -> movement resources -> app resources -> local resources
+//-    also, alphabetize the imorts (in their appropriate groups)
+//- e.g.
+//- import D3 from 'd3'
+//- import map from '@movementventures/ui-kit/components/map'
+import ClassBlock from '~/src/components/class-block'
+import './__local__/index.ess'
+
+//- js block is optional when you're declaring simple variables,
+//-    but required if you want to assign a variable to the result of a function or something
+//-    or basically anything multiline
+:js
+  var classes = _.classes
+  var label = function() {
+    return "Here are all the classes in the school";
+  }
+  var colors = [
+    "blue",
+    "red",
+    "green"
+  ]
+
+.Classes-label= label
+
+.Classes-list
+  //- i named it classroom because 'class' is giving me weird highlighting
+  each classroom in classes
+    ClassBlock.Classes-class(classroom=classroom)
+
+:module
+  export function componentDidMount() {
+    console.log('mounted!');
+  }
