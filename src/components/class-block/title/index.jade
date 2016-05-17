@@ -1,0 +1,17 @@
+:doc
+  @name ClassBlockTitle
+  @prop {string} title
+
+:js
+  var title = props.title
+
+span= title
+
+:module
+  export function componentDidMount() {
+    this.viewedTitleEvent();
+  }
+
+  export function viewedTitleEvent() {
+    console.log('you saw the title!');
+  }

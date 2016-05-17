@@ -5,6 +5,7 @@
   @prop {Object} class
   @prop {String} [backgroundColor]  // This is an optional prop
 
+import ClassBlockTitle from './title'
 import './index.ess'
 
 var classroom = props.classroom
@@ -13,4 +14,5 @@ var backgroundColor = props.backgroundColor
 //- This div will automatically get the class name from the `@name` declaration above, or it can be explicitly set for readability
 .ClassBlock(style={'background-color': backgroundColor})
   //- if you don't specify an html tag, it will automatically be a `div`
-  .ClassBlock-title= classroom.name
+  .ClassBlock-title
+    ClassBlockTitle(title=classroom.name)
