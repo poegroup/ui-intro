@@ -2,9 +2,11 @@
 // notice we didn't have a __local__ directory in the components, there's no need here
 
 .ClassBlock
+  align-items center
+  background-color = __.color.accent
   display flex
-  width 120px
   height 60px
-  background-color blue
-  text-align center
+  justify-content center
   margin 4px
+  text-align center
+  width 120px

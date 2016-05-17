@@ -1,4 +1,4 @@
-text-decoration none
-color purple
+color = __.color.primary
 font-size 24px
 font-weight bold
+text-decoration none
